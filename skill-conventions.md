@@ -49,7 +49,7 @@ Every skill's name starts with `ianf-`, so it can't collide with built-in skills
 
 ## Invocation
 
-Decide whether agents can invoke the skill, and lean hard towards **cannot**: set `disable-model-invocation: true`, so it runs only when the user types its name. Always write the field, even when it matches Claude Code's default, so every skill shows the decision. Let agents invoke it (`disable-model-invocation: false`) only when it has to start without the user typing its name: when it reacts to something Claude meets mid-task, such as `/ianf-coupled-tags` before editing a tagged line, or to requests from people who won't know its name, such as `/ianf-report-problem`. Then its description must name the situations that should trigger it.
+Decide whether agents can invoke the skill, and lean hard towards **cannot**: set `disable-model-invocation: true`, so it runs only when the user types its name. Always write the field, even when it matches Claude Code's default, so every skill shows the decision. Let agents invoke it (`disable-model-invocation: false`) only when it has to start without the user typing its name: when it reacts to something Claude meets mid-task, such as `/ianf-coupled` before editing a tagged line, or to requests from people who won't know its name, such as `/ianf-report-problem`. Then its description must name the situations that should trigger it.
 
 Whenever you create a skill or change this setting, report the choice on a line of its own, as one of these exact texts, followed by a one-line reason, so the user can overrule it:
 
@@ -62,7 +62,7 @@ Talk to the user in these terms, never as `disable-model-invocation` being true 
 
 Decide where each skill runs and on which model, and write the settings out, as for invocation.
 
-**Fork** (`context: fork`) a skill that needs nothing from the conversation but the text typed after its name: it gathers its inputs as it loads or with its own commands, asks the user nothing part way, and its final message is the whole result. It then runs as a subagent without the conversation's history, which saves most of a run's tokens late in a long session. A question it would ask becomes a ⚠️ line, with a 👉 line saying what to pass next time. **Keep inline** a skill that reads the conversation, asks questions or waits for approval part way, or sets up the main agent for later work, such as `/ianf-coupled-tags`.
+**Fork** (`context: fork`) a skill that needs nothing from the conversation but the text typed after its name: it gathers its inputs as it loads or with its own commands, asks the user nothing part way, and its final message is the whole result. It then runs as a subagent without the conversation's history, which saves most of a run's tokens late in a long session. A question it would ask becomes a ⚠️ line, with a 👉 line saying what to pass next time. **Keep inline** a skill that reads the conversation, asks questions or waits for approval part way, or sets up the main agent for later work, such as `/ianf-coupled`.
 
 A forked skill writes all five settings:
 
