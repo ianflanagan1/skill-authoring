@@ -1,0 +1,11 @@
+version = 1
+
+["COUPLED:skill-log-dir:"]
+relations = ["="]
+
+# Written by coupled --update: each group as it was last reviewed. Don't edit below this line.
+
+[reviewed."COUPLED:skill-log-dir:"]
+definition = "a6fbfa7abd4e1ae3"
+"COUPLED:skill-log-dir: append-entry" = {}
+"COUPLED:skill-log-dir: list-logs" = {}

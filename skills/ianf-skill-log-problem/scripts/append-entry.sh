@@ -10,7 +10,7 @@
 
 set -o nounset
 
-# COUPLED:skill-log-dir:[=]
+# COUPLED:skill-log-dir: append-entry
 dir=$HOME/.local/state/claude-skills/ianf-skill-log-problem
 
 [ $# -eq 1 ] || { echo 'usage: append-entry.sh <skill>, with the entry on stdin' >&2; exit 2; }
