@@ -81,4 +81,5 @@ When a skill goes wrong, run `/ianf-skill-log-problem`.
 ```sh
 devbox run -- task test   # shunit2
 devbox run -- task lint   # shellcheck
+devbox run -- task check  # lint, then test, failing on any problem
 ```

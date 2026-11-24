@@ -7,7 +7,7 @@
 
 set -o nounset
 
-# COUPLED:skill-log-dir. = ianf-skill-log-problem scripts/append-entry.sh
+# COUPLED:skill-log-dir:[=]
 dir=$HOME/.local/state/claude-skills/ianf-skill-log-problem
 
 found=0

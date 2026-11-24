@@ -4,6 +4,7 @@
     "shunit2@2.1.8",
     "shellcheck@latest",
     "python@3.13",
-    "go-task@3.53.1"
+    "go-task@3.53.1",
+    "github:ianflanagan1/coupled-tags-lint/v0.1.0#coupled-tags-lint"
   ]
 }
