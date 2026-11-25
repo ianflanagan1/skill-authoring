@@ -5,6 +5,6 @@
     "shellcheck@latest",
     "python@3.13",
     "go-task@3.53.1",
-    "github:ianflanagan1/coupled-tags-lint/v0.1.0#coupled-tags-lint"
+    "github:ianflanagan1/coupled/v0.3.0#coupled"
   ]
 }
